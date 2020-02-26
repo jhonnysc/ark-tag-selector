@@ -27,7 +27,10 @@ export const Tag = styled.div`
 `;
 
 export const TagResult = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  padding: 20px;
+  grid-gap: 20px;
 `;
 
 export const OpImage = styled.img`
