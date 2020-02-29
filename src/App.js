@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, TagsContainer, Tag, OpImage, TagResult } from "./styles";
+import {
+  Container,
+  TagsContainer,
+  Tag,
+  OpImage,
+  TagResult,
+  ResultCard
+} from "./styles";
 import Operators from "./assets/operators";
 import "./app.css";
 
@@ -47,16 +54,6 @@ function App() {
   const [tags, setTags] = useState(allTags);
   const [operators, setOperators] = useState({});
 
-  const removeOne = (target, key) => {
-    let index;
-    target.forEach((value, ind) => {
-      if (key === value) index = ind;
-    });
-    // console.log(index);
-    target.pop(index);
-    // return target;
-  };
-
   const handleClick = tagName => {
     let newtags = [];
     if (tags.includes(tagName)) {
@@ -94,33 +91,6 @@ function App() {
       }
     });
     setOperators(x);
-
-    // let x = { ...operators };
-    // Object.keys(Operators).forEach(key => {
-    //   Operators[key].combos.forEach(combo => {
-    //     let found_tag;
-
-    //     combo.forEach(tag => {
-    //       if (!newtags.includes(tag)) found_tag = tag;
-    //     });
-
-    //     if (found_tag) {
-    //       if (x[key]) {
-    //         let found_combo = false;
-    //         x[key].forEach(z => {
-    //           if (z === combo) found_combo = true;
-    //         });
-    //         if (!found_combo) x[key].push(combo);
-    //       } else {
-    //         x[key] = [combo];
-    //       }
-    //     } else {
-    //       if (x[key]) );
-    //     }
-    //     if (x[key] && x[key].length < 1) delete x[key];
-    //   });
-    // setOperators(x);
-    // });
   };
 
   useEffect(() => {
@@ -141,7 +111,16 @@ function App() {
           </Tag>
         ))}
       </TagsContainer>
-      <TagResult></TagResult>
+      <TagResult>
+        {Object.keys(operators).map(operator => (
+          <ResultCard>
+            <span>{operator}</span>
+            {operators[operator].map(combo => (
+              <div>{combo.join(" - ")}</div>
+            ))}
+          </ResultCard>
+        ))}
+      </TagResult>
     </Container>
   );
 }

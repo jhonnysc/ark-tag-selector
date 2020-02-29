@@ -27,13 +27,39 @@ export const Tag = styled.div`
 `;
 
 export const TagResult = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
-  grid-gap: 20px;
 `;
 
 export const OpImage = styled.img`
   width: 100px;
   height: 100px;
+`;
+
+export const ResultCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 250px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ccd7ff;
+  border-radius: 10px;
+  margin: 20px;
+
+  & > div {
+    font-size: 15px;
+    background-color: white;
+    border: 1px black solid;
+    width: 100%;
+
+    :hover {
+      background-color: gray;
+    }
+  }
+
+  & > span {
+    color: blue;
+  }
 `;

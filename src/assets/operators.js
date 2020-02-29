@@ -12,6 +12,31 @@ module.exports = {
       ["AoE", "Melee"],
       ["Guard", "AoE"]
     ]
+  },
+  Zima: {
+    rarity: 5,
+    combos: [
+      ["Vanguard", "Support"],
+      ["DP-Recovery", "Support"]
+    ]
+  },
+  Texas: {
+    rarity: 5,
+    combos: [
+      ["Vanguard", "Crowd Control"],
+      ["Crowd Control"],
+      ["Crowd Control", "Melee"],
+      ["Crowd Control", "DP-Recovery"]
+    ]
+  },
+  Vulcan: {
+    rarity: 5,
+    combos: [
+      ["Defender", "Survival"],
+      ["Defender", "DPS"],
+      ["Defense", "DPS"],
+      ["Defense", "Survival"]
+    ]
   }
 };
 
