@@ -42,7 +42,7 @@ const allTags = [
 ].sort();
 
 function App() {
-  const [tags, setTags] = useState(allTags);
+  const [tags, setTags] = useState([]);
   const [stars, setStars] = useState({ four: true, five: true });
   const [operators, setOperators] = useState({});
 
@@ -55,7 +55,7 @@ function App() {
       newtags = [...tags, tagName];
       setTags(newtags);
     }
-    let x = { ...operators };
+    let temp_ops = { ...operators };
     Object.keys(Operators).forEach(key => {
       let found_combos = [];
       let not_found = [];
@@ -67,27 +67,34 @@ function App() {
         if (found) found_combos.push(combo);
         else not_found.push(combo);
       });
+
       if (found_combos.length > 0) {
-        if (x[key]) {
+        if (temp_ops[key]) {
           found_combos.forEach(combo => {
-            if (!x[key].includes(combo)) x[key].push(combo);
+            if (!temp_ops[key].combos.includes(combo))
+              temp_ops[key].combos.push(combo);
           });
-        } else x[key] = found_combos;
+        } else
+          temp_ops[key] = {
+            rarity: Operators[key].rarity,
+            combos: found_combos
+          };
       } else {
-        if (x[key]) {
+        if (temp_ops[key]) {
           not_found.forEach(combo => {
-            if (x[key].includes(combo)) x[key].pop(combo);
+            if (temp_ops[key].combos.includes(combo))
+              temp_ops[key].combos.pop(combo);
           });
-          if (x[key].length < 1) delete x[key];
+          if (temp_ops[key].combos.length < 1) delete temp_ops[key];
         }
       }
     });
-    setOperators(x);
+    setOperators(temp_ops);
   };
 
-  useEffect(() => {
-    console.log(operators);
-  }, [tags, operators]);
+  // useEffect(() => {
+  //   handleClick(null);
+  // }, []);
 
   return (
     <Container>
@@ -101,7 +108,14 @@ function App() {
             {tag}
           </Tag>
         ))}
-        <Tag onClick={() => setTags([])}>CLEAR</Tag>
+        <Tag
+          onClick={() => {
+            setTags([]);
+            setOperators({});
+          }}
+        >
+          CLEAR
+        </Tag>
         <Tag
           selected={stars.five}
           onClick={() =>
@@ -124,21 +138,26 @@ function App() {
         </Tag>
       </TagsContainer>
       <TagResult>
-        {Object.keys(operators).map(operator => (
-          <ResultCard>
-            <div>
-              <OpImage
-                src={process.env.PUBLIC_URL + `/chara/${operator}.png`}
-              />
+        {Object.keys(operators).map(operator => {
+          if (stars[operators[operator].rarity])
+            return (
+              <ResultCard>
+                {console.log(stars[operators[operator].rarity])}
+                <div>
+                  <OpImage
+                    src={process.env.PUBLIC_URL + `/chara/${operator}.png`}
+                  />
 
-              <span>{operator}</span>
-            </div>
+                  <span>{operator}</span>
+                </div>
 
-            {operators[operator].map(combo => (
-              <li>{combo.join(" - ")}</li>
-            ))}
-          </ResultCard>
-        ))}
+                {operators[operator].combos.map(combo => (
+                  <li>{combo.join(" - ")}</li>
+                ))}
+              </ResultCard>
+            );
+          return null;
+        })}
       </TagResult>
     </Container>
   );

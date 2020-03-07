@@ -1,21 +1,21 @@
 module.exports = {
   Cliffheart: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Special", "DPS"],
       ["DPS", "Shift"]
     ]
   },
   FEater: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Special", "Slow"],
       ["Shift", "Slow"]
     ]
   },
-  Meteorite: { rarity: 5, combos: [["AoE", "Debuff"]] },
+  Meteorite: { rarity: "five", combos: [["AoE", "Debuff"]] },
   "Projekt Red": {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Special", "Crowd Control"],
       ["Crowd Control"],
@@ -24,7 +24,7 @@ module.exports = {
     ]
   },
   Texas: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Vanguard", "Crowd Control"],
       ["Crowd Control"],
@@ -33,7 +33,7 @@ module.exports = {
     ]
   },
   Vulcan: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Defender", "Survival"],
       ["Defender", "DPS"],
@@ -42,30 +42,29 @@ module.exports = {
     ]
   },
   Croissant: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Defender", "Shift"],
       ["Shift", "Defense"]
     ]
   },
-  "Any Recruitable 5*": { rarity: 5, combos: [["Senior Operator"]] },
   Liskarm: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Defender", "DPS"],
       ["Defense", "DPS"]
     ]
   },
   Manticore: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Special", "Survival"],
       ["Special", "DPS"]
     ]
   },
-  Firewatch: { rarity: 5, combos: [["Nuker"]] },
+  Firewatch: { rarity: "five", combos: [["Nuker"]] },
   Ptilopsis: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Medic", "Support"],
       ["Ranged", "Support"],
@@ -73,21 +72,21 @@ module.exports = {
     ]
   },
   Zima: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Vanguard", "Support"],
       ["DP-Recovery", "Support"]
     ]
   },
   Istina: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Supporter", "DPS"],
       ["Ranged", "Slow", "DPS"]
     ]
   },
   Mayer: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Supporter", "Crowd Control"],
       ["Summon"],
@@ -96,17 +95,17 @@ module.exports = {
     ]
   },
   Warfarin: {
-    rarity: 5,
+    rarity: "five",
     combos: [
       ["Medic", "Support"],
       ["Ranged", "Support"],
       ["Healing", "Support"]
     ]
   },
-  Pramanix: { rarity: 5, combos: [["Supporter", "Debuff"]] },
-  Meteor: { rarity: 4, combos: [["Sniper", "AoE"], ["Debuff"]] },
+  Pramanix: { rarity: "five", combos: [["Supporter", "Debuff"]] },
+  Meteor: { rarity: "four", combos: [["Sniper", "AoE"], ["Debuff"]] },
   ShiraYuki: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Sniper", "Slow"],
       ["Sniper", "AoE"],
@@ -114,7 +113,7 @@ module.exports = {
     ]
   },
   Frostleaf: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Guard", "Slow"],
       ["Melee", "Slow"],
@@ -122,25 +121,25 @@ module.exports = {
     ]
   },
   Gummy: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Defender", "Healing"],
       ["Defense", "Healing"],
       ["Melee", "Healing"]
     ]
   },
-  Shaw: { rarity: 4, combos: [["Special"], ["Shift"]] },
+  Shaw: { rarity: "four", combos: [["Special"], ["Shift"]] },
   Nearl: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Defender", "Healing"],
       ["Defense", "Healing"],
       ["Melee", "Healing"]
     ]
   },
-  Rope: { rarity: 4, combos: [["Special"], ["Shift"]] },
+  Rope: { rarity: "four", combos: [["Special"], ["Shift"]] },
   Specter: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Guard", "AoE"],
       ["AoE", "Melee"],
@@ -148,7 +147,7 @@ module.exports = {
     ]
   },
   Estelle: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Guard", "AoE"],
       ["AoE", "Melee"],
@@ -156,20 +155,19 @@ module.exports = {
     ]
   },
   Doberman: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["DPS", "Support"],
       ["Support", "&gt; 4h"]
     ]
   },
-  Gravel: { rarity: 4, combos: [["Special"], ["Fast-Redeploy"]] },
+  Gravel: { rarity: "four", combos: [["Special"], ["Fast-Redeploy"]] },
   Jessica: {
-    rarity: 4,
+    rarity: "four",
     combos: [
       ["Sniper", "Survival"],
       ["Survival", "Ranged"]
     ]
   },
-  Haze: { rarity: 4, combos: [["Debuff"]] }
+  Haze: { rarity: "four", combos: [["Debuff"]] }
 };
-const x = {};
