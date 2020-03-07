@@ -95,7 +95,6 @@ function App() {
 
   useEffect(() => {
     console.log(operators);
-    return () => {};
   }, [tags, operators]);
 
   return (

@@ -1,16 +1,75 @@
 module.exports = {
-  Specter: {
+  Cliffheart: {
     rarity: 5,
     combos: [
-      ["AoE", "Melee"],
-      ["Guard", "AoE"]
+      ["Special", "DPS"],
+      ["DPS", "Shift"]
     ]
   },
-  Estelle: {
+  FEater: {
     rarity: 5,
     combos: [
-      ["AoE", "Melee"],
-      ["Guard", "AoE"]
+      ["Special", "Slow"],
+      ["Shift", "Slow"]
+    ]
+  },
+  Meteorite: { rarity: 5, combos: [["AoE", "Debuff"]] },
+  "Projekt Red": {
+    rarity: 5,
+    combos: [
+      ["Special", "Crowd Control"],
+      ["Crowd-Control"],
+      ["Crowd Control", "Melee"],
+      ["Crowd Control", "Fast-Redeploy"]
+    ]
+  },
+  Texas: {
+    rarity: 5,
+    combos: [
+      ["Vanguard", "Crowd Control"],
+      ["Crowd-Control"],
+      ["Crowd Control", "Melee"],
+      ["Crowd-Control", "DP Recovery"]
+    ]
+  },
+  Vulcan: {
+    rarity: 5,
+    combos: [
+      ["Defender", "Survival"],
+      ["Defender", "DPS"],
+      ["Defense", "Survival"],
+      ["Defense", "DPS"]
+    ]
+  },
+  Croissant: {
+    rarity: 5,
+    combos: [
+      ["Defender", "Shift"],
+      ["Shift", "Defense"]
+    ]
+  },
+  "Any Recruitable 5*": { rarity: 5, combos: [["Senior Operator"]] },
+  Liskarm: {
+    rarity: 5,
+    combos: [
+      ["Defender", "DPS"],
+      ["Defense", "DPS"]
+    ]
+  },
+  Manticore: {
+    rarity: 5,
+    combos: [
+      ["Special", "Survival"],
+      ["Special", "DPS"]
+    ]
+  },
+  Firewatch: { rarity: 5, combos: [["Nuker"]] },
+  Ptilopsis: {
+    rarity: 5,
+    combos: [
+      ["Medic", "Support"],
+      ["Ranged", "Support"],
+      ["Healing", "Support"]
     ]
   },
   Zima: {
@@ -20,59 +79,29 @@ module.exports = {
       ["DP-Recovery", "Support"]
     ]
   },
-  Texas: {
+  Istina: {
     rarity: 5,
     combos: [
-      ["Vanguard", "Crowd Control"],
-      ["Crowd Control"],
-      ["Crowd Control", "Melee"],
-      ["Crowd Control", "DP-Recovery"]
+      ["Supporter", "DPS"],
+      ["Ranged", "Slow", "DPS"]
     ]
   },
-  Vulcan: {
+  Mayer: {
     rarity: 5,
     combos: [
-      ["Defender", "Survival"],
-      ["Defender", "DPS"],
-      ["Defense", "DPS"],
-      ["Defense", "Survival"]
+      ["Supporter", "Crowd Control"],
+      ["Summon"],
+      ["Crowd-Control"],
+      ["Crowd Control", "Ranged"]
     ]
-  }
+  },
+  Warfarin: {
+    rarity: 5,
+    combos: [
+      ["Medic", "Support"],
+      ["Ranged", "Support"],
+      ["Healing", "Support"]
+    ]
+  },
+  Pramanix: { rarity: 5, combos: [["Supporter", "Debuff"]] }
 };
-
-// const x = {
-//   Specter: {
-//     rarity: 5,
-//     combos: [['AoE', 'Melee'], ['Guard', 'AoE']],
-//   },
-//   Estelle: ['Guard', 'AoE'],
-//   Frostleaft: ['Guard', 'Slow'],
-//   Nearl: ['Defender', 'Healing'],
-//   Gummy: ['Defender', 'Healing'],
-//   Jessica: ['Sniper', 'Survival'],
-//   Shirayuki: ['Sniper', 'Slow'],
-//   Meteorite: ['Sniper', 'AoE'],
-//   Shirayuki_2: ['Sniper', 'AoE'],
-//   ProjektRed: ['Special'],
-//   Manticore: ['Special'],
-//   Cliffheart: ['Special'],
-//   FEater: ['Special'],
-//   Gravel: ['Special'],
-//   Rope: ['Special'],
-//   Shaw: ['Special'],
-//   Shaw_2: ['Shift'],
-//   Cliffheart_2: ['Shift'],
-//   FEater_2: ['Shift'],
-//   Croissant: ['Shift'],
-//   Rope_2: ['Shift'],
-//   Meteorite_2: ['Debuff'],
-//   Pramanix: ['Debuff'],
-//   Haze: ['Debuff'],
-//   Meteor: ['Debuff'],
-//   ProjektRed_2: ['Fast-Redeploy'],
-//   Gravel_2: ['Fast-Redeploy'],
-//   Specter_2: ],
-//   Estelle_2: ['AoE', 'Melee'],
-//   FEater_3: ['Melee', 'Slow'],
-//   Frostleaf_3: ['Melee', 'Slow'],
-// }
