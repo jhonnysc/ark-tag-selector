@@ -18,18 +18,18 @@ module.exports = {
     rarity: 5,
     combos: [
       ["Special", "Crowd Control"],
-      ["Crowd-Control"],
+      ["Crowd Control"],
       ["Crowd Control", "Melee"],
-      ["Crowd Control", "Fast-Redeploy"]
+      ["Crowd Control", "Fast Redeploy"]
     ]
   },
   Texas: {
     rarity: 5,
     combos: [
       ["Vanguard", "Crowd Control"],
-      ["Crowd-Control"],
+      ["Crowd Control"],
       ["Crowd Control", "Melee"],
-      ["Crowd-Control", "DP Recovery"]
+      ["Crowd Control", "DP-Recovery"]
     ]
   },
   Vulcan: {
@@ -91,7 +91,7 @@ module.exports = {
     combos: [
       ["Supporter", "Crowd Control"],
       ["Summon"],
-      ["Crowd-Control"],
+      ["Crowd Control"],
       ["Crowd Control", "Ranged"]
     ]
   },

@@ -51,7 +51,7 @@ const allTags = [
 ].sort();
 
 function App() {
-  const [tags, setTags] = useState(allTags);
+  const [tags, setTags] = useState([]);
   const [operators, setOperators] = useState({});
 
   const handleClick = tagName => {
