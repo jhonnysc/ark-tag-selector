@@ -35,24 +35,34 @@ export const TagResult = styled.div`
 export const OpImage = styled.img`
   width: 100px;
   height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 `;
 
 export const ResultCard = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 150px;
-  height: 250px;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   background-color: #ccd7ff;
   border-radius: 10px;
   margin: 20px;
+  padding: 20px;
 
   & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+  }
+
+  & > li {
+    list-style-type: none;
     font-size: 15px;
-    background-color: white;
-    border: 1px black solid;
-    width: 100%;
+    background-color: #d1d3ff;
+    margin-left: 20px;
+    border-radius: 10px;
 
     :hover {
       background-color: gray;

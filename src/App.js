@@ -10,15 +10,6 @@ import {
 import Operators from "./assets/operators";
 import "./app.css";
 
-const cache = {};
-function importAll(r) {
-  r.keys().forEach(key => {
-    cache[key] = r(key);
-  });
-}
-
-importAll(require.context("./assets/icons", true, /\.jpg$/));
-
 const allTags = [
   "Starter",
   "Senior Operator",
@@ -51,7 +42,8 @@ const allTags = [
 ].sort();
 
 function App() {
-  const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState(allTags);
+  const [stars, setStars] = useState({ four: true, five: true });
   const [operators, setOperators] = useState({});
 
   const handleClick = tagName => {
@@ -109,13 +101,41 @@ function App() {
             {tag}
           </Tag>
         ))}
+        <Tag onClick={() => setTags([])}>CLEAR</Tag>
+        <Tag
+          selected={stars.five}
+          onClick={() =>
+            setStars(star => {
+              return { ...star, five: !stars.five };
+            })
+          }
+        >
+          5*
+        </Tag>
+        <Tag
+          selected={stars.four}
+          onClick={() =>
+            setStars(star => {
+              return { ...star, four: !stars.four };
+            })
+          }
+        >
+          4*
+        </Tag>
       </TagsContainer>
       <TagResult>
         {Object.keys(operators).map(operator => (
           <ResultCard>
-            <span>{operator}</span>
+            <div>
+              <OpImage
+                src={process.env.PUBLIC_URL + `/chara/${operator}.png`}
+              />
+
+              <span>{operator}</span>
+            </div>
+
             {operators[operator].map(combo => (
-              <div>{combo.join(" - ")}</div>
+              <li>{combo.join(" - ")}</li>
             ))}
           </ResultCard>
         ))}

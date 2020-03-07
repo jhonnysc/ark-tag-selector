@@ -20,7 +20,7 @@ module.exports = {
       ["Special", "Crowd Control"],
       ["Crowd Control"],
       ["Crowd Control", "Melee"],
-      ["Crowd Control", "Fast Redeploy"]
+      ["Crowd Control", "Fast-Redeploy"]
     ]
   },
   Texas: {
@@ -103,5 +103,73 @@ module.exports = {
       ["Healing", "Support"]
     ]
   },
-  Pramanix: { rarity: 5, combos: [["Supporter", "Debuff"]] }
+  Pramanix: { rarity: 5, combos: [["Supporter", "Debuff"]] },
+  Meteor: { rarity: 4, combos: [["Sniper", "AoE"], ["Debuff"]] },
+  ShiraYuki: {
+    rarity: 4,
+    combos: [
+      ["Sniper", "Slow"],
+      ["Sniper", "AoE"],
+      ["AoE", "Slow"]
+    ]
+  },
+  Frostleaf: {
+    rarity: 4,
+    combos: [
+      ["Guard", "Slow"],
+      ["Melee", "Slow"],
+      ["Slow", "DPS"]
+    ]
+  },
+  Gummy: {
+    rarity: 4,
+    combos: [
+      ["Defender", "Healing"],
+      ["Defense", "Healing"],
+      ["Melee", "Healing"]
+    ]
+  },
+  Shaw: { rarity: 4, combos: [["Special"], ["Shift"]] },
+  Nearl: {
+    rarity: 4,
+    combos: [
+      ["Defender", "Healing"],
+      ["Defense", "Healing"],
+      ["Melee", "Healing"]
+    ]
+  },
+  Rope: { rarity: 4, combos: [["Special"], ["Shift"]] },
+  Specter: {
+    rarity: 4,
+    combos: [
+      ["Guard", "AoE"],
+      ["AoE", "Melee"],
+      ["AoE", "Survival"]
+    ]
+  },
+  Estelle: {
+    rarity: 4,
+    combos: [
+      ["Guard", "AoE"],
+      ["AoE", "Melee"],
+      ["AoE", "Survival"]
+    ]
+  },
+  Doberman: {
+    rarity: 4,
+    combos: [
+      ["DPS", "Support"],
+      ["Support", "&gt; 4h"]
+    ]
+  },
+  Gravel: { rarity: 4, combos: [["Special"], ["Fast-Redeploy"]] },
+  Jessica: {
+    rarity: 4,
+    combos: [
+      ["Sniper", "Survival"],
+      ["Survival", "Ranged"]
+    ]
+  },
+  Haze: { rarity: 4, combos: [["Debuff"]] }
 };
+const x = {};
